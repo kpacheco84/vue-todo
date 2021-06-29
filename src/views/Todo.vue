@@ -12,6 +12,7 @@
             @keyup.enter="addTask"
           ></v-text-field>
 <v-list
+    v-if="tasks.length"
       subheader
     class="pt-0"
     >
@@ -47,9 +48,20 @@ v-for="task in tasks"
         </v-list-item>
         <v-divider></v-divider>
 </div>
-      
+     
    
     </v-list>
+     <div class='text-h5 primary--text no-tasks' v-else
+     
+     >
+       <v-icon
+       large
+       color=green darken-2
+       >
+       mdi-check
+       </v-icon>
+        No Tasks
+        </div>
   </div>
 </template>
 
@@ -94,3 +106,14 @@ v-for="task in tasks"
   
   }
 </script>
+<style lang="css" >
+.no-tasks{
+display: flex;
+justify-content: center;
+align-items: center;
+padding:50px;
+opacity:.5
+}
+</style>
+
+
