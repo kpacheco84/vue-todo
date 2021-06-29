@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about pa-6">
     <h1>About Vuetify Todo</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quia qui, 
       labore ex possimus veritatis quo, doloribus temporibus, dignissimos aspernatur 
