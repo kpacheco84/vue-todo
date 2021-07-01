@@ -3,19 +3,26 @@
     <v-navigation-drawer
       v-model="drawer"
       app
+      mobile-breakpoint="768"
     >
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="title">
-            Vuetify Todo
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            Best Todo Ever!
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider></v-divider>
+     <v-img
+      class="pa-4 pt-7"
+      height="170"
+      src="ocean.jpg"
+      gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+>
+ <v-avatar
+size="70"
+class="mb-2"
+ >
+      <img
+        src="https://cdn.vuetifyjs.com/images/john.jpg"
+        alt="John"
+      >
+    </v-avatar>
+    <div class="white--text text-subtitle-1 font-weight-bold">Joseph Smith</div>
+    <div class="white--text text-subtitle-2">jsmith21</div>
+</v-img>
 
       <v-list
         dense
@@ -45,6 +52,7 @@
       src="ocean.jpg"
       prominent
       height='170'
+      
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -60,7 +68,7 @@
       
         </v-row>
         <v-row>
-          <v-toolbar-title class="text-h4 m1-4">Vuetify Todo</v-toolbar-title>
+          <v-toolbar-title class="text-h4 m1-4">{{$store.state.appTitle}}</v-toolbar-title>
       </v-row>
       <v-row>
         <live-date-time/>
@@ -87,6 +95,7 @@
         { title: 'About', icon: 'mdi-help-box', to: '/about' },
       ],
     }),
+    
     components: {
        'search': require('@/components/Tools/Search.vue').default,
       'snackbar': require('@/components/Shared/Snackbar.vue').default,
