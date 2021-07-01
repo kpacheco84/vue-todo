@@ -44,6 +44,7 @@
       dark
       src="ocean.jpg"
       prominent
+      height='170'
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -59,7 +60,11 @@
       
         </v-row>
         <v-row>
-          <v-toolbar-title class="m1-4">Vuetify Todo</v-toolbar-title>
+          <v-toolbar-title class="text-h4 m1-4">Vuetify Todo</v-toolbar-title>
+      </v-row>
+      <v-row>
+        <live-date-time/>
+      
       </v-row>
      </v-container>
     </v-app-bar>
@@ -73,6 +78,7 @@
 
 <script>
 
+
   export default {
     data: () => ({
       drawer: null,
@@ -83,8 +89,10 @@
     }),
     components: {
        'search': require('@/components/Tools/Search.vue').default,
-      'snackbar': require('@/components/Shared/Snackbar.vue').default
+      'snackbar': require('@/components/Shared/Snackbar.vue').default,
+       'live-date-time': require('@/components/Tools/LiveDateTime.vue').default
      
     }
   }
+
 </script>
