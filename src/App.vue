@@ -42,7 +42,7 @@
       app
       color="primary"
       dark
-      src="mountains.jpg"
+      src="ocean.jpg"
       prominent
     >
       <template v-slot:img="{ props }">
